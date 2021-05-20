@@ -48,5 +48,7 @@
          </font></Text>
       <Label fx:id="stringErrorLabel" layoutX="82.0" layoutY="91.0" prefHeight="41.0" prefWidth="513.0" />
       <Label fx:id="piLabel" layoutX="256.0" layoutY="18.0" prefHeight="41.0" prefWidth="189.0" text="Label" />
+      <Label layoutX="43.0" layoutY="151.0" prefHeight="26.0" prefWidth="43.0" text="Score: " />
+      <Label fx:id="scoreLabel" layoutX="86.0" layoutY="156.0" prefHeight="16.0" prefWidth="126.0" />
    </children>
 </AnchorPane>

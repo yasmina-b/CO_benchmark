@@ -1,10 +1,7 @@
 package controller;
 
 import bench.IBenchmark;
-import bench.cpu.ArctanMethod;
-import bench.cpu.CPUDigitsOfPI;
-import bench.cpu.CPUPrimeNumbers;
-import bench.cpu.PiDigits;
+import bench.cpu.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -144,15 +141,16 @@ public class AppMainController {
             ILog log = new ConsoleLogger();
             int n = Integer.parseInt(nrOfDigits.getText());
             TimeUnit timeUnit = TimeUnit.Nano;
-            IBenchmark bench = new PiDigits(n);
+            IBenchmark bench = new PiSpigot(n);
 
             bench.intialize(n);
             for (int i = 0; i < 1; i++)
             {
                 timer.start();
-                bench.run(n);
+                bench.run();
                 time.setText(log.writeTime(timer.stop(), timeUnit));
-                //piLabel.setText(PiDigits.pi.toString());
+                piLabel.setText(PiSpigot.predigits.toString());
+                PiSpigot.predigits.setLength(0);
             }
             log.close();
 

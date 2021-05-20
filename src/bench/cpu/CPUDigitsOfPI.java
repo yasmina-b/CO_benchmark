@@ -49,7 +49,6 @@ public class CPUDigitsOfPI implements IBenchmark {
 
 		// user digit input applied
 		pi = pi.setScale(size,  BigDecimal.ROUND_HALF_UP);
-		System.out.println(pi);
 		pi_aux = pi;
 		pi =  BigDecimal.ZERO;
 	}
@@ -59,6 +58,11 @@ public class CPUDigitsOfPI implements IBenchmark {
 
 	@Override
 	public void run(Object... objects) {
+
+	}
+
+	@Override
+	public void run(int digits) {
 
 	}
 

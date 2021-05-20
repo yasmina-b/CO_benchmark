@@ -12,11 +12,14 @@ import logging.TimeUnit;
 import timing.ITimer;
 import timing.Timer;
 
-import java.math.BigDecimal;
-import java.sql.Time;
-import java.time.Duration;
-
 public class AppMainController {
+
+
+    long score;
+    String time3;
+
+    @FXML
+    public Label scoreLabel;
 
     @FXML
     public TextField nrOfDigits;
@@ -73,7 +76,7 @@ public class AppMainController {
             ILog log = new ConsoleLogger();
             int n = Integer.parseInt(nrOfDigits.getText());
             TimeUnit timeUnit = TimeUnit.Nano;
-            IBenchmark bench = new CPUDigitsOfPI();
+            IBenchmark bench = new BaileyBorweinPlouffePi(n);
 
             bench.intialize(n);
 
@@ -84,7 +87,14 @@ public class AppMainController {
                 time.setText(log.writeTime(timer.stop(), timeUnit));
             }
             log.close();
-            piLabel.setText(CPUDigitsOfPI.pi_aux.toString());
+            String aux = "";
+            String pi = BaileyBorweinPlouffePi.pi_real.toString();
+            aux = pi.substring(0,n+2);
+
+            score = (timer.stop() / n);
+            scoreLabel.setText(String.valueOf(score));
+
+            piLabel.setText(aux);
 
         }
         else{
@@ -118,6 +128,8 @@ public class AppMainController {
                 time.setText(log.writeTime(timer.stop(), timeUnit));
             }
             log.close();
+            score = (timer.stop() / n);
+            scoreLabel.setText(String.valueOf(score));
         }
         else{
 
@@ -153,6 +165,8 @@ public class AppMainController {
                 PiSpigot.predigits.setLength(0);
             }
             log.close();
+            score = (timer.stop() / n);
+            scoreLabel.setText(String.valueOf(score));
 
         }
         else{
@@ -196,4 +210,6 @@ public class AppMainController {
         }
 
     }
+
+
 }

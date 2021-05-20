@@ -152,6 +152,7 @@ public class AppMainController {
                 timer.start();
                 bench.run(n);
                 time.setText(log.writeTime(timer.stop(), timeUnit));
+                //piLabel.setText(PiDigits.pi.toString());
             }
             log.close();
 

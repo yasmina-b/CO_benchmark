@@ -8,6 +8,7 @@ import java.math.RoundingMode;
 public class CPUDigitsOfPI implements IBenchmark {
 
 	private int size;
+	public static BigDecimal pi_aux;
 	public static BigDecimal pi =  BigDecimal.ZERO;
 	public static BigDecimal denom1 =  BigDecimal.ONE;
 	public static BigDecimal denom2 =  BigDecimal.ONE;
@@ -48,6 +49,7 @@ public class CPUDigitsOfPI implements IBenchmark {
 		// user digit input applied
 		pi = pi.setScale(size,  BigDecimal.ROUND_HALF_UP);
 		System.out.println(pi);
+		pi_aux = pi;
 		pi =  BigDecimal.ZERO;
 	}
 	@Override

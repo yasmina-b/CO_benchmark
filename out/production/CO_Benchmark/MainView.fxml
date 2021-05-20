@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppMainController">
+   <children>
+      <ImageView fitHeight="436.0" fitWidth="730.0" layoutX="-71.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pi2.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="137.0" layoutY="231.0" mnemonicParsing="false" onAction="#warmup" style="-fx-background-radius: 15;" text="Click to Warm-Up" textFill="#0b5dc7" />
+      <TextField fx:id="nrOfDigits" alignment="CENTER" layoutX="219.0" layoutY="175.0" promptText="Insert number of digits" />
+      <Button layoutX="350.0" layoutY="231.0" mnemonicParsing="false" onAction="#getDigitsOfPi" style="-fx-background-radius: 15;" text="Get Digits Of Pi" textFill="#0b5dc7" />
+      <Text fx:id="time" fontSmoothingType="LCD" layoutX="196.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="195.20001220703125">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text fx:id="warmup" layoutX="350.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="253.5999755859375">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+   </children>
+</AnchorPane>

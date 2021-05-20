@@ -1,5 +1,7 @@
 package bench;
 
+import java.util.ArrayList;
+
 public interface IBenchmark {
 	
 	/**
@@ -23,6 +25,8 @@ public interface IBenchmark {
 	 * @param option May pass a benchmark option defined by the benchmark class itself
 	 */	
 	public void run(Object option);
+
+	public void run(Object ...objects);
 	
 	
 	public String getResult();
@@ -30,6 +34,12 @@ public interface IBenchmark {
 	public void warmUp();
 	
 	public void warmUp(Object option);
+
+	public void initialize(int size);
+
+	public void initialize(String str);
+
+	public void initialize(ArrayList<String> words);
 	
 	/**
 	 * Called to explicitly release allocated data. <br>

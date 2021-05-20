@@ -4,6 +4,7 @@ import bench.IBenchmark;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 
 public class CPUDigitsOfPI implements IBenchmark {
 
@@ -57,6 +58,11 @@ public class CPUDigitsOfPI implements IBenchmark {
 	}
 
 	@Override
+	public void run(Object... objects) {
+
+	}
+
+	@Override
 	public void clean() {
 	}
 
@@ -68,6 +74,21 @@ public class CPUDigitsOfPI implements IBenchmark {
 
 	@Override
 	public void warmUp(Object option) {
+
+	}
+
+	@Override
+	public void initialize(int size) {
+
+	}
+
+	@Override
+	public void initialize(String str) {
+
+	}
+
+	@Override
+	public void initialize(ArrayList<String> words) {
 
 	}
 

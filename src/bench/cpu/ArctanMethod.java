@@ -10,18 +10,10 @@ public class ArctanMethod implements IBenchmark {
     private static final BigDecimal FOUR = BigDecimal.valueOf(4);
     private static final int roundingmode = BigDecimal.ROUND_HALF_UP;
     private final int digits;
-
+    public static BigDecimal piF =  BigDecimal.ZERO;
 
     public ArctanMethod(int digits) {
         this.digits = digits;
-    }
-
-    public static BigDecimal arctanPi(int digits){
-        int s = digits + 5;
-        BigDecimal arctan15 = arctangent(5,s);
-        BigDecimal arctan1239 = arctangent(239,s);
-        BigDecimal pi = arctan15.multiply(FOUR).subtract(arctan1239).multiply(FOUR);
-        return pi.setScale(digits, BigDecimal.ROUND_HALF_UP);
     }
 
     public static BigDecimal arctangent(int x,int s){
@@ -49,9 +41,8 @@ public class ArctanMethod implements IBenchmark {
             }
             i++;
         }while(term.compareTo(BigDecimal.ZERO) != 0);
-
         return arc;
-        
+
     }
 
 
@@ -66,9 +57,19 @@ public class ArctanMethod implements IBenchmark {
     }
 
     @Override
+    public void run(int digits){
+        int s = digits + 5;
+        BigDecimal arctan15 = arctangent(5,s);
+        BigDecimal arctan1239 = arctangent(239,s);
+        BigDecimal pi = arctan15.multiply(FOUR).subtract(arctan1239).multiply(FOUR);
+        piF = pi.setScale(digits, BigDecimal.ROUND_HALF_UP);
+    }
+
+    @Override
     public void run(Object option) {
 
     }
+
 
     @Override
     public void run(Object... objects) {
@@ -110,3 +111,4 @@ public class ArctanMethod implements IBenchmark {
 
     }
 }
+

@@ -27,7 +27,8 @@ public interface IBenchmark {
 	public void run(Object option);
 
 	public void run(Object ...objects);
-	
+
+	public void run(int digits);
 	
 	public String getResult();
 	

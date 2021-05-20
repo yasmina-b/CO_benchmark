@@ -3,23 +3,16 @@ package bench.cpu;
 import bench.IBenchmark;
 import javafx.fxml.Initializable;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class CPUPrimeNumbers implements IBenchmark {
     private long N;
-
+    public static int number;
+    public static int primeCount;
+    public static String result="";
     @Override
     public void run(Object... options) {
-        if (options[0] instanceof String){
-            String option=(String)options[0];
-            switch (option) {
-                case "primeNumbers":
-                    this.primeNumbers();
-                    break;
-                default:
-                    throw new IllegalArgumentException("Option invalid!");
-            }
-        }
     }
 
     @Override
@@ -27,15 +20,15 @@ public class CPUPrimeNumbers implements IBenchmark {
         return null;
     }
 
-    private void primeNumbers() {
-        long number=2;
-        long primeCount=0;
-        while(primeCount<N) {
+    private void primeNumbers(int digits) {
+        number=2;
+        primeCount=0;
+        while(primeCount<digits) {
             if(isPrime(number)) {
-                //System.out.print(number + " ");
                 primeCount++;
+                result = result + " " + number;
             }
-            number++;
+            number=number +1;
         }
     }
 
@@ -84,12 +77,18 @@ public class CPUPrimeNumbers implements IBenchmark {
     }
     @Override
     public void intialize(int size) {
+        result="";
 
     }
 
     @Override
     public void run() {
-        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void run(int digits) {
+        this.primeNumbers(digits);
 
     }
 

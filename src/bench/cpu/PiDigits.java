@@ -4,7 +4,7 @@ import bench.IBenchmark;
 
 import java.util.ArrayList;
 
-public class PiDigits implements IBenchmark {
+public class PiDigits implements IBenchmark{
 
     private static final int scale = 10000;
     private static final int arrint = 2000;
@@ -51,6 +51,11 @@ public class PiDigits implements IBenchmark {
 
     @Override
     public void run(Object... objects) {
+
+    }
+
+    @Override
+    public void run(int digits) {
 
     }
 

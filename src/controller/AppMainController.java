@@ -30,8 +30,8 @@ public class AppMainController {
     @FXML
     public Text time;
 
-    @FXML
-    public Text time2;
+//    @FXML
+//    public Text time2;
 
     @FXML
     public Label stringErrorLabel;

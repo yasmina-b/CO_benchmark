@@ -14,7 +14,7 @@ public class ApplicationMain extends Application {
 
         this.primaryStage=primaryStage;
         this.primaryStage.setTitle("Digits of PI ~ CPU Benchmark");
-        Parent root = FXMLLoader.load(ApplicationMain.class.getResource("resource/MainView.fxml"));
+        Parent root = FXMLLoader.load(ApplicationMain.class.getResource("resource/message.fxml"));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();

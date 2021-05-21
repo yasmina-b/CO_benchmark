@@ -16,6 +16,7 @@ public class AppMainController {
 
 
     long score;
+    @FXML
     String time3;
 
     @FXML
@@ -202,6 +203,9 @@ public class AppMainController {
                 time.setText(log.writeTime(timer.stop(), timeUnit));
             }
             log.close();
+
+            score = (timer.stop() / n);
+            scoreLabel.setText(String.valueOf(score));
         }
         else{
 

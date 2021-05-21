@@ -11,22 +11,18 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppMainController">
    <children>
-      <ImageView fitHeight="436.0" fitWidth="730.0" layoutX="-71.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="410.0" fitWidth="721.0" layoutX="-63.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@pi2.jpg" />
          </image>
       </ImageView>
       <TextField fx:id="nrOfDigits" alignment="CENTER" layoutX="219.0" layoutY="175.0" promptText="Insert number of digits" />
-      <Button layoutX="350.0" layoutY="231.0" mnemonicParsing="false" onAction="#getDigitsOfPi" style="-fx-background-radius: 15;" text="Get Digits Of Pi" textFill="#0b5dc7" />
-      <Button layoutX="200.0" layoutY="231.0" mnemonicParsing="false" onAction="#getDigitsOfPi2" style="-fx-background-radius: 15;" text="Get Digits Of Pi2" textFill="#0b5dc7" />
-      <Button layoutX="90.0" layoutY="231.0" mnemonicParsing="false" onAction="#getDigitsOfPi3" style="-fx-background-radius: 15;" text="Get Digits Of Pi3" textFill="#0b5dc7" />
-      <Button layoutX="200.0" layoutY="131.0" mnemonicParsing="false" onAction="#getPrime" style="-fx-background-radius: 15;" text="getPrime" textFill="#0b5dc7" />
+      <Button layoutX="82.0" layoutY="231.0" mnemonicParsing="false" onAction="#getDigitsOfPi" style="-fx-background-radius: 15; -fx-background-color: #1d3557;" text="Get Digits Of Pi" textFill="#0b5dc7" />
+      <Button layoutX="243.0" layoutY="231.0" mnemonicParsing="false" onAction="#getDigitsOfPi2" style="-fx-background-radius: 15; -fx-background-color: #1d3557;" text="Get Digits Of Pi2" textFill="#0b5dc7" />
+      <Button layoutX="400.0" layoutY="231.0" mnemonicParsing="false" onAction="#getDigitsOfPi3" style="-fx-background-radius: 15; -fx-background-color: #1d3557;" text="Get Digits Of Pi3" textFill="#0b5dc7" />
+      <Button layoutX="265.0" layoutY="288.0" mnemonicParsing="false" onAction="#getPrime" style="-fx-background-radius: 15; -fx-background-color: #1d3557;" text="getPrime" textFill="#0b5dc7" />
 
       <Text fx:id="time2" fontSmoothingType="LCD" layoutX="400.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="195.20001220703125">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font></Text>
-      <Text fx:id="time3" fontSmoothingType="LCD" layoutX="300.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="195.20001220703125">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Text>
@@ -47,6 +43,8 @@
             <Font name="System Bold" size="12.0" />
          </font></Text>
       <Label fx:id="stringErrorLabel" layoutX="82.0" layoutY="91.0" prefHeight="41.0" prefWidth="513.0" />
-      <Label fx:id="piLabel" layoutX="196.0" layoutY="18.0" prefHeight="41.0" prefWidth="189.0" text="Label" />
+      <Label fx:id="piLabel" layoutX="256.0" layoutY="18.0" prefHeight="41.0" prefWidth="189.0" text="Label" />
+      <Label layoutX="43.0" layoutY="151.0" prefHeight="26.0" prefWidth="43.0" text="Score: " />
+      <Label fx:id="scoreLabel" layoutX="86.0" layoutY="156.0" prefHeight="16.0" prefWidth="126.0" />
    </children>
 </AnchorPane>
